@@ -1,9 +1,9 @@
 # landing-page
 _Landing page con barra de navegacion funcional y diseño para moviles de 375px de ancho_
 
-_Link github pages https://edwardsucasaca.github.io/landing-page/ _
+Link github pages https://edwardsucasaca.github.io/landing-page/
 
-_El trabajo cuenta ademas con: _
+El trabajo cuenta ademas con:
 
 * Slider automatico
 * Cards
