@@ -1,0 +1,385 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(46 52 64);
+    color: rgb(236 239 244);
+    font-family: 'Rubik', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+/*Barra de navegacion*/
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    width: 92%;
+    position: fixed;
+    background-color: rgb(46 52 64);
+    border-radius: 0.25em;
+    z-index: 100;
+}
+
+#titulo{
+    flex-direction: column;
+    line-height: 30px;
+    
+}
+
+header ul li{
+    display: inline-block;
+    margin: 30px;
+}
+
+header a{
+    color: rgb(236 239 244);
+    padding: 0.5em 0.5em;
+    transition:  border-radius, background-color 0.5s;
+}
+
+header a:hover{
+    border-radius: 0.25em;
+    background: rgb(67 76 94);
+}
+
+h1:hover{
+    cursor: pointer;
+}
+/*Texto-informacion*/
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    height: 500px;
+}
+
+h2{
+    font-size: 50px;
+    margin-top: 100px;
+}
+
+aside p{
+    margin: 30px 0px 50px 0px;
+    line-height: 20px;
+    max-width: 550px;
+    color: rgb(171 185 207);
+}
+
+aside a{
+    text-decoration: none;
+    background-color: rgb(59 66 82);
+    border-radius: 0.25em;
+    font-size: 25px;
+    color: rgb(236 239 244);
+    font-weight: bold;
+    padding: 0.5em 0.5em;
+    transition:  border-radius, background-color 0.5s;
+
+}
+
+aside a:hover{
+    border-radius: 0.25em;
+    background: rgb(67 76 94);
+}
+/*Slider*/
+.imagen{
+    
+    width: 450px;
+    height: auto;
+    /*margin-right: 30px;*/
+    overflow: hidden;
+    cursor: pointer;
+    
+}
+.imagen ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 15s infinite alternate ease-in-out;
+}
+
+.imagen ul li{
+    list-style: none;
+    width: 100%;
+}
+.imagen img{
+    width: 100%;
+    border-radius: 0.35em;
+}
+
+@keyframes slide{
+    0%{margin-left: 0%;}
+    25%{margin-left: 0%;}
+
+    30%{margin-left: -100%;}
+    50%{margin-left: -100%;}
+
+    55%{margin-left: -200%;}
+    75%{margin-left: -200%;}
+
+    80%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+
+}
+/*Formulario*/
+.formulario{
+    height: 580px;
+    margin: 100px 250px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 15px 25px 30px 25px;
+    background-color: rgb(59 66 82);
+    border-radius: 0.35em;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+h3{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 20px 0 15px 0;
+}
+
+form [type="submit"]{
+    height: 50px;
+    width: 100%;
+    background-color: rgb(67 76 94);
+    color: rgb(236 239 244);
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.5s;
+    /*margin: 20px 25%;*/
+}
+
+form [type="submit"]:hover{
+    cursor: pointer;
+    background: rgb(76 86 106);
+}
+form p{
+    margin-top: 20px;
+    color: rgb(236 239 244);
+}
+form a{
+    color: rgb(171 185 207);
+}
+form .btn-enviar{
+    margin-top: 40px;
+}
+input{
+    margin-top: 20px;
+    height: 20px;
+    padding: 15px;
+    border-radius: 0.35em;
+    border: none;
+    font-size: 15px;
+    outline: none;
+}
+/*Cards*/
+.cards-container{
+    
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 200px 0;
+    padding:100px 0;
+
+}
+
+.cards-container .card{
+    background-color: rgb(59 66 82);
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.cards-container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cards-container .card img{
+    width: 70%;
+    height: auto;
+    margin: 20px 0 10px 0;
+    border-radius: 0.35em;
+}
+
+.cards-container .card p{
+    color: rgb(171 185 207);
+    padding: 0.1rem;
+    margin: 0 10px 20px 0;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.cards-container .card a{
+    background-color: rgb(76 86 106);
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(236 239 244);
+    border-radius: 0.35em;
+    padding: 0.5em 0.5em;
+    transition:  border-radius, background-color 0.5s;
+}
+
+.cards-container .card a:hover{
+    border-radius: 0.25em;
+    background: rgb(67 76 94);
+}
+/*Footer*/
+footer{
+    width: 100%;
+    margin-top: 390px;
+    padding: 30px 0;
+    background-color: rgb(41 46 57);
+    text-align: center;
+    border-radius: 0.35em;
+}
+
+footer .icono{
+    width: 24px;
+    height: 24px;
+    margin: 30px 10px;
+}
+
+footer .icono:hover{
+    color: rgb(236 239 244);
+}
+
+footer li{
+    list-style: none;
+    padding: 0.4em 0.4em;
+}
+
+footer ul a{
+    color: rgb(171 185 207);
+    text-decoration: none;
+    
+}
+/*Media queries*/
+@media screen and (max-width: 375px) {
+
+    body{
+        padding: 10px 20px;
+    }
+    header{
+        flex-direction: column;
+        height: auto;
+        margin: 0px auto;
+        
+        
+    }
+    #titulo{
+        margin-top: 10px;
+
+    }
+    #titulo h1{
+        font-size: 20px;
+    }
+    header .sign-up{
+        margin-left: 80px;
+    }
+
+    header .about{
+        margin-left: 47px;
+    }
+   
+    
+    main{
+        flex-direction: column-reverse;
+        height: auto;
+        align-items: center;
+        margin-top:150px ;
+    }
+    aside{
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    aside a{
+        font-size: 18px;
+    }
+    .imagen{
+        margin-top: 100px;
+        width: 250px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    .formulario{
+        
+        padding-top: 250px;
+        /*eight: 580px;*/
+        height: auto;
+        margin: 30px auto;
+    }
+    form{
+        padding-top: 5px;
+    }
+    h3{
+        display: none;
+    }
+    input{
+        height: 10px;
+        font-size: 12px;
+    }
+    form .btn-enviar{
+        margin-top: 10px;
+        padding: 5px;
+        height: 25px;
+        font-size: 12px;
+    }
+    form p{
+        margin-top: 10px;
+        font-size: 12px;
+    }
+    .cards-container{
+        padding-top: 230px;
+        justify-content: center;
+    }
+    .cards-container .card{
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        height: auto;
+        width: auto;
+    }
+    .card p{
+        display: none;
+    }
+    .card img{
+        margin-bottom: 20px;
+    }
+    .card a{
+        margin: 15px auto;
+    }
+    footer{
+        margin-top: 500px;
+    }
+}
